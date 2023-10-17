@@ -265,6 +265,7 @@ export function resolveVueCompilerOptions(vueOptions: Partial<VueCompilerOptions
 			defineModel: ['defineModel'],
 			defineOptions: ['defineOptions'],
 			withDefaults: ['withDefaults'],
+			defineAttrs: ['defineAttrs'],
 			...vueOptions.macros,
 		},
 		plugins: vueOptions.plugins ?? [],

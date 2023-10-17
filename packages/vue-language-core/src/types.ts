@@ -29,6 +29,7 @@ export interface VueCompilerOptions {
 		defineModel: string[];
 		defineOptions: string[];
 		withDefaults: string[];
+		defineAttrs: string[];
 	};
 	plugins: VueLanguagePlugin[];
 	hooks: string[];

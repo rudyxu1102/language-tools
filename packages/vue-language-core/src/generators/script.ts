@@ -33,6 +33,7 @@ export function generate(
 		script: _sfc.script,
 		scriptSetup: _sfc.scriptSetup,
 	};
+
 	if (!sfc.script && !sfc.scriptSetup) {
 		sfc.scriptSetup = {
 			content: '',
@@ -52,6 +53,7 @@ export function generate(
 			emits: {},
 			expose: {},
 			slots: {},
+			attrs: {},
 			defineProp: [],
 			importSectionEndOffset: 0,
 			leadingCommentEndOffset: 0,

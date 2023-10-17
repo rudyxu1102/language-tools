@@ -78,6 +78,7 @@
 					"default": {
 						"defineProps": [ "defineProps" ],
 						"defineSlots": [ "defineSlots" ],
+						"defineAttrs": [ "defineAttrs" ],
 						"defineEmits": [ "defineEmits" ],
 						"defineExpose": [ "defineExpose" ],
 						"withDefaults": [ "withDefaults" ]

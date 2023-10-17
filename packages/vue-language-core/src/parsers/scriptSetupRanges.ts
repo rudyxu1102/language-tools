@@ -27,6 +27,10 @@ export function parseScriptSetupRanges(
 		name?: string;
 		define?: TextRange;
 	} = {};
+	const attrs: {
+		name?: string;
+		define?: TextRange;
+	} = {};
 	const emits: {
 		name?: string;
 		define?: TextRange;
@@ -81,6 +85,7 @@ export function parseScriptSetupRanges(
 		bindings,
 		props,
 		slots,
+		attrs,
 		emits,
 		expose,
 		defineProp,
@@ -175,6 +180,11 @@ export function parseScriptSetupRanges(
 				slots.define = _getStartEnd(node);
 				if (ts.isVariableDeclaration(parent)) {
 					slots.name = parent.name.getText(ast);
+				}
+			} else if (vueCompilerOptions.macros.defineAttrs.includes(callText)) {
+				attrs.define = _getStartEnd(node);
+				if (ts.isVariableDeclaration(parent)) {
+					attrs.name = parent.name.getText(ast);
 				}
 			}
 			else if (vueCompilerOptions.macros.defineEmits.includes(callText)) {
